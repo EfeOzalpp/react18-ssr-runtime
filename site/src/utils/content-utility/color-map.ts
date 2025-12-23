@@ -36,5 +36,11 @@ export const projectColors: Record<string, ProjectColor> = {
     tooltipAlpha: 0.6,
     defaultAlpha: 0.6,
     darkThemeTop: 'rgba(17, 17, 17, 1)'
+  },
+  'Book Design & Writing': {
+    rgb: '120, 211, 255',
+    tooltipAlpha: 0.6,
+    defaultAlpha: 0.6,
+    darkThemeTop: 'rgba(17, 17, 17, 1)'
   }
 };

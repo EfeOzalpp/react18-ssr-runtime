@@ -78,7 +78,7 @@ export const baseProjects: Project[] = [
   },
     {
     key: 'climate', 
-    title: 'Writing & Book Design',
+    title: 'Book Design & Writing',
     lazyImport: () => toComponent(import('../../components/block-type-1/climate-book')),
   },
   {
@@ -178,6 +178,19 @@ export function useProjectLoader(key: ProjectKey) {
     };
   }
 
+  if (key === 'climate') {
+    return async () => {
+      const Enhancer = (await import('../../ssr/projects/climate.enhancer')).default;
+      return {
+        default: () => (
+          <>
+            {desc.render!(data)}
+            <Enhancer />
+          </>
+        ),
+      };
+    };
+  }
 
     // Default SSR (no enhancer)
     return async () => ({ default: () => <>{desc.render!(data)}</> });

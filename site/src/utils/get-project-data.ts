@@ -20,7 +20,7 @@ const queries: Record<string, string> = {
     alt,
     image{ asset->{ url } } 
   }`,
-    'climate-book': `*[_type=="mediaBlock" && slug.current=="climate-book"][0]{
+  'climate-book': `*[_type=="mediaBlock" && slug.current=="climate-book"][0]{
     mediaOne{ alt,image,video{ "webmUrl": webm.asset->url, "mp4Url": mp4.asset->url, poster } }
   }`,
   // add others as I go

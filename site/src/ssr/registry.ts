@@ -5,6 +5,7 @@ import { rotarySSR }  from './projects/rotary.ssr';
 import { datavizSSR } from './projects/dataviz.ssr';
 import { dynamicSSR } from './projects/dynamic.ssr';
 import { gameSSR } from './projects/game.ssr';
+import { climateSSR } from './projects/climate.ssr';
 
 export const ssrRegistry: SsrRegistry = {
   scoop:   scoopSSR,
@@ -12,4 +13,5 @@ export const ssrRegistry: SsrRegistry = {
   dataviz: datavizSSR,
   dynamic: dynamicSSR,
   game: gameSSR,
+  climate: climateSSR,
 };
